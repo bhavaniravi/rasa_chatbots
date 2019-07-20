@@ -1,0 +1,13 @@
+templates:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+actions:
+- utter_greet
+- action_default_fallback
+- action_search_google
+
+
+intent:
+  - greet
+  - search_google
