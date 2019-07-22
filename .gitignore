@@ -7,3 +7,5 @@ errors.json
 confmat.png
 results
 models
+rasa_core.log
+graph.html

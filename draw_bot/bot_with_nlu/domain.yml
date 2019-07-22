@@ -1,0 +1,15 @@
+actions:
+- action_draw_shape
+- utter_intro
+
+entities:
+- num_sides
+- shape
+
+intents:
+- intro
+- draw_shape
+
+templates:
+  utter_intro:
+  - text: Hi, I am Drawbot, I can draw shapes for you
