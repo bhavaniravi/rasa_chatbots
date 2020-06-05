@@ -1,0 +1,30 @@
+intents:
+  - greet
+  - goodbye
+  - intro
+  - get_meaning
+  - get_opposite
+
+actions:
+  - action_get_meaning
+  - action_get_opposite
+
+entities:
+  - word
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a Dictionary bot, I bring meaning and opposites"
+
+  get_meaning:
+    - action_get_meaning
+
+  get_opposite:
+    - action_get_opposite
+
