@@ -36,8 +36,10 @@ class DrawShape(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        print (tracker.latest_message["entities"])
-        print ("I am being called")
-        dispatcher.utter_message("Drawn the shape successfully")
+        for entity in tracker.latest_message["entities"]:
+            if entity["entity"] == "shape":
+                shape = entity["value"]
+                dispatcher.utter_message(f"Drawn the shape {shape} successfully")
+        
         return []
 
