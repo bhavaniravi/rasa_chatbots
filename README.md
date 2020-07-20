@@ -7,10 +7,9 @@ In this tutorial we will build 3 simple chatbots thereby understanding the basic
 ## Bots
 1. Echo bot - A bot that repeats whatever you say
 2. Google Search Bot - A bot that searches Google for you
-3. Draw Bot - A bot that draws the shapes you say
+3. wordbot - A bot that gives you meaning and opposites
 
-Each of these bots is split into 3 python modules. Each with it's own `Tutorial.md` file.
-
+Each bot has it's own folder with `Tutorial.md` file.
 
 ## How do we build it?
 
@@ -35,7 +34,17 @@ I use `virtualenv` to create a virtualenv and create
 `pip install -r requirements.txt`
 
 
-## 1. Echo bot
+## Creating bot from scratch
+
+```
+mkdir <botname>
+cd <botname>
+rasa init
+```
+
+## Using Existing bot
+
+### 1. Echo bot
 
 For a bot that repeats whatever a user says we don't need any NLP. But this will help us few concepts.
 
@@ -46,7 +55,7 @@ But before moving on let's do this without any NLP.
 `python bot_without_nlp.py`
 
 
-## 2. Search bot
+### 2. Search bot
 
 Again, a search bot does not need much of NLP. But this example is just to explain how chatbots make an API call to fetch you data.
 
@@ -54,20 +63,25 @@ Again, a search bot does not need much of NLP. But this example is just to expla
 
 `python bot_without_nlp.py`
 
+### 3. Word bot
 
-## 3. Draw Bot
-
-This is where it gets interesting. 
-
-```buildoutcfg
-Draw a square
-Draw a rectangle
-Draw a ploygon with 5 sides
-Draw a circle
-Draw a polygon with infinite sides
-Draw a shape with infinite sides
+1. Train the bot
+```
+cd wordbot
+rasa train
 ```
 
-How will our chatbot understand all these and draw our shape.
+2. Run the command line UI
+
+```
+rasa shell
+```
+
+3. Run the actions server
+
+```
+rasa run actions
+```
+
 
 
