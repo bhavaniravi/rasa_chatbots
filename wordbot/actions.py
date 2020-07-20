@@ -37,8 +37,11 @@ class ActionGetMeaning(Action):
         word = list(tracker.get_latest_entity_values("word"))[0]
 
         meaning = get_synonyms(word)
-        dispatcher.utter_message(text=f"The meaning of word {word} is {meaning}")
-
+        if  meaning:
+            meaning = meaning[0]
+            dispatcher.utter_message(text=f"The meaning of word {word} is {meaning}")
+        else: 
+            dispatcher.utter_message(text=f"Couldn't find meaning for the {word}")
         return []
 
 
@@ -54,6 +57,6 @@ class ActionGetOpposite(Action):
 
         word = list(tracker.get_latest_entity_values("word"))[0]
         opposite = get_antonym(word)
-        dispatcher.utter_message(text=f"The meaning of word {word} is {opposite}")
+        dispatcher.utter_message(text=f"The opposite of word {word} is {opposite}")
 
         return []
