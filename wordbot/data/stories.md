@@ -11,8 +11,8 @@
 ## Get Opposite
 * greet
   - utter_greet
-* get_opposite{"word": "hello"}
-  - action_get_opposite
+<!-- * get_opposite{"word": "hello"}
+  - action_get_opposite -->
 
 ## say goodbye
 * goodbye
