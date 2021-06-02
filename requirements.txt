@@ -123,7 +123,7 @@ tqdm==4.45.0
 twilio==6.26.3
 tzlocal==2.1
 ujson==2.0.3
-urllib3==1.25.9
+urllib3==1.26.5
 uvloop==0.14.0
 wcwidth==0.2.3
 webexteamssdk==1.3
